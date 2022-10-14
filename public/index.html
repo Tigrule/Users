@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <div id="vue-app">
+        <pop-card v-if="isCardShow" :user="showedUser"></pop-card>
+        <section class="search-block"></section>
+        <section class="users">
+          <div class="grid container">
+            <user v-for="user of users" :user="user"></user>
+          </div>
+        </section>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="js/userVue.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
