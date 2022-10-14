@@ -95,6 +95,36 @@ body {
   }
 }
 
+.search {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid #f2eded;
+  display: flex;
+  border-radius: 1.5em;
+  margin: 35px auto 20px auto;
+
+  &:active {
+    outline: 1px solid #f2d2d2 ;
+  }
+
+
+  input {
+    width: 100%;
+    border: none;
+  }
+
+  input:focus {
+    border: none;
+    outline: 0;
+  }
+
+  button {
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+  }
+}
+
 .linked {
   background-color: #eee;
 }

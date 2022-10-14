@@ -101,6 +101,37 @@ body {
   cursor: pointer;
 }
 
+.search {
+  display: inline-block;
+  width: 100%;
+  border: 2px solid #f2eded;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 1.5em;
+  margin: 35px auto 20px auto;
+}
+
+.search:active {
+  outline: 1px solid #f2d2d2;
+}
+
+.search input {
+  width: 100%;
+  border: none;
+}
+
+.search input:focus {
+  border: none;
+  outline: 0;
+}
+
+.search button {
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
 .linked {
   background-color: #eee;
 }

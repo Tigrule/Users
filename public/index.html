@@ -10,7 +10,12 @@
     <main>
       <div id="vue-app">
         <pop-card v-if="isCardShow" :user="showedUser"></pop-card>
-        <section class="search-block"></section>
+        <section class="search-block container">
+          <form class="search" @submit.prevent="search()">
+            <input type="text" v-model="queryText" />
+            <button type="submit"><img src="img/loup.png" alt="loup" /></button>
+          </form>
+        </section>
         <section class="users">
           <div class="grid container">
             <user v-for="user of users" :user="user"></user>
@@ -20,6 +25,7 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="js/userVue.js"></script>
+    <script src="js/searchComp.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

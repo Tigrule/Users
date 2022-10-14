@@ -4,8 +4,10 @@ const vueApp = new Vue({
   el: '#vue-app',
   data: {
     users: [],
+    filteredUsers: [],
     showedUser: {},
     isCardShow:false,
+    queryText:'',
   },
   methods: {
     getJson(url) {
@@ -16,6 +18,11 @@ const vueApp = new Vue({
     showCard(user) {
       this.showedUser = user;
       this.isCardShow = true;
+    },
+    search() {
+      let query = `${server}?term=${this.queryText}`
+      this.getJson(query)
+      .then((data)=>{this.users = data})
     }
   },
   mounted() {
